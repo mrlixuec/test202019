@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+  </head>
+  <body>
+
+   <h2>culture版块的新闻</h2>
+  {{ range (.Paginator 5).Pages }}
+           
+          <div style="border: 1px solid black; margin:10px; padding:10px; ">
+               <div style="font-size:20px;">
+                    <a href="{{.URL}}">{{.Title}}</a>
+               </div>
+
+              
+          </div>
+     {{ end }}
+
+  </body>
+</html>

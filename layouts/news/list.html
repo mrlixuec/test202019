@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="/jquery/jquery-3.3.1.min.js"></script>
+
+  </head>
+  <body>
+
+	<img src="../pic/newsBanner.jpg" alt="" class="mb3">
+<img id="idImgFading" src="/pic/happyNewYear.jpg" width="240" height="180" style="cursor: hand"> （图片链接至文章）
+
+{{ with .Site.GetPage "/news/importantNews" }}
+          <div style="border: 1px solid black; margin:10px; padding:10px; ">
+               <div style="font-size:20px;">
+                    <a href="{{.URL}}">{{.Title}}</a>
+               </div>
+（按时间取出四个进行排序）
+
+{{ range first 4 ( .Pages.ByPublishDate.Reverse )}}
+                 <div style="font-size:20px;">
+                  <li>  <a href="{{.URL}}">{{.Title}}</a> </li>
+               </div>
+
+{{ end }}
+
+
+</div>
+{{ end }}
+
+ <img src="../pic/mid_banner.jpg" alt="" class="mb3">
+
+{{ with .Site.GetPage "/news/cultureNews" }}
+          <div style="border: 1px solid black; margin:10px; padding:10px; ">
+               <div style="font-size:20px;">
+                    <a href="{{.URL}}">{{.Title}}</a>
+               </div>
+              {{range .Pages}}
+                 <div style="font-size:20px;">
+                  <li>  <a href="{{.URL}}">{{.Title}}</a> </li>
+               </div>
+             {{end}}
+</div>
+{{ end }}
+<script>
+$("#idImgFading").click(function(){
+         location.href='/news/others/上海大学2020年新年贺词';
+});
+</script>
+  </body>
+</html>

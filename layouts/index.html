@@ -1,0 +1,59 @@
+
+<html>
+<head>
+
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+
+			<div class="w-60-l ph2-l">
+				<img src="pic/logo.jpg" alt="" class="mb3">
+			</div>
+<li><a href="http://www.shu.edu.cn/xxgk/xxjj.htm" target="_blank">学校概况</a>
+<ul class="dl-submenu">
+<li class="dl-back" target="_blank"><a href="http://www.shu.edu.cn/xxgk/xxjj.htm">返回上一级</a></li>
+
+<li><a href="http://www.shu.edu.cn/xxgk/xxjj.htm">学校概况</a></li>
+<li><a href="http://www.shu.edu.cn/xxgk/xxjj.htm">学校简介</a></li>
+<li><a href="http://www.shu.edu.cn/xxgk/sdxs2.htm">上大校史</a></li>
+<li><a href="http://www.shu.edu.cn/xxgk/xxjg1.htm">学校机构</a></li>
+<li><a href="http://www.shu.edu.cn/xxgk/xrld.htm">现任领导</a></li>
+<li><a href="http://www.shu.edu.cn/xxgk/lrld.htm">历任领导</a></li>
+
+</ul>
+</li>
+
+
+<li><a href="http://www.shu.edu.cn/yxsz1.htm" target="_blank">院系设置</a>
+<ul class="dl-submenu">
+<li class="dl-back" target="_blank"><a href="http://www.shu.edu.cn/yxsz1.htm">返回上一级</a></li>
+
+<li><a href="http://www.shu.edu.cn/yxsz1.htm">院系设置</a></li>
+<li><a href="http://www.shu.edu.cn/yxsz1.htm#1">理学</a></li>
+<li><a href="http://www.shu.edu.cn/yxsz1.htm#2">人文社科</a></li>
+<li><a href="http://www.shu.edu.cn/yxsz1.htm#3">工学</a></li>
+<li><a href="http://www.shu.edu.cn/yxsz1.htm#4">经济管理</a></li>
+<li><a href="http://www.shu.edu.cn/yxsz1.htm#5">医学</a></li>
+<li><a href="http://www.shu.edu.cn/yxsz1.htm#6">艺术类</a></li>
+<li><a href="http://www.shu.edu.cn/yxsz1.htm#7">其他类</a></li>
+
+</ul>
+</li>
+
+
+<li><a href="http://news.shu.edu.cn/" target="_blank">新闻中心</a>
+
+</li>
+
+ {{ range .Pages }}
+              {{if eq .Title "News"}}
+                    <li> <a href="{{.URL}}">新闻中心2</a></li>
+               </div>
+              {{end}}
+     {{ end }}
+
+</body>
+</html>
